@@ -18,7 +18,6 @@
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
 - has_many :groups_users
 - has_many :messages
 - has_many  :users,  through:  :groups_users
