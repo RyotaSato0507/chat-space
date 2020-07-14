@@ -4,16 +4,18 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :group
-- has_many :massages
+- has_many :groups
+- has_many :messages
+- has_many  :users,  through:  :groups_users
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|name|string|null: false|
 |text|text|null: false|
+|group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -27,15 +29,12 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
 - belongs_to :group
 
-## massagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|text|text||
-|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
