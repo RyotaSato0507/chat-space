@@ -1,6 +1,6 @@
 # README
 
-```html:chat-space.db
+```html
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
