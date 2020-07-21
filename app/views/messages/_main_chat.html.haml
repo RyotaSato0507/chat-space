@@ -1,0 +1,37 @@
+.Chat
+  .MainHeader
+    .MainHeader__group
+      %h3.MainHeader__groupName
+        グループ名
+      %ul.MainHeader__memberList
+        Member:
+        %li.MainHeader__member
+          ユーザー名
+    = link_to '#',class: "MainHeader__editButton" do
+      Edit
+  .MainChat
+    .MainChatBox
+      .MainChatInfo
+        .MainChatInfo__userName
+          ユーザー名
+        .MainChatInfo__date
+          2020/7/20 19:00
+      .Message
+        %p.MainChat__content
+          こんにちは
+      .MainChatInfo
+        .MainChatInfo__userName
+          ユーザー名
+        .MainChatInfo__date
+          2020/7/20 19:15
+      .Message
+        %p.MainChat__content
+          こんばんわ
+  .MainBottomBar
+    %form.Form
+      .Form__contents
+        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
+        %label.Form__inputImage
+          = icon('fas', 'image', class: 'Form__icon')
+          %input.Hidden{type: 'file'}
+      %input.Form__submit{type: 'submit', value: 'Send'}  
