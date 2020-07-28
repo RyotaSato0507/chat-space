@@ -13,22 +13,23 @@
   .MainChat
     = render @messages
     .MainChatBox
-      .MainChatInfo
-        .MainChatInfo__userName
+      .MessageBox
+        .MainChatInfo
+          .MainChatInfo__userName
           -# ユーザー名
-        .MainChatInfo__date
+          .MainChatInfo__date
           -# 2020/7/20 19:00
-      .Message
-        %p.MainChat__content
+        .Message
+          %p.MainChat__content
           -# こんにちは
-      .MainChatInfo
-        .MainChatInfo__userName
-          -# ユーザー名
-        .MainChatInfo__date
-          -# 2020/7/20 19:15
-      .Message
-        %p.MainChat__content
-          -# こんばんわ
+      -# .MainChatInfo
+      -#   .MainChatInfo__userName
+      -#     -# ユーザー名
+      -#   .MainChatInfo__date
+      -#     -# 2020/7/20 19:15
+      -# .Message
+      -#   %p.MainChat__content
+      -#     -# こんばんわ
   .MainBottomBar
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents

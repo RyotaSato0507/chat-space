@@ -102,22 +102,25 @@
 
 .MainChat{
   background-color: #fafafa;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   padding: 35px 40px 0;
   height: calc(100vh - 100px - 90px);
   overflow: scroll;
+  display: block;
 }
 
-.MainChatBox{
+.MessageBox{
   margin-bottom: 46px;
 }
 
 .MainChatInfo {
+  // box-sizing: border-box;
   display: flex;
   &__userName {
     color: #434a54;
     font-size: 16px;
     font-weight: bold;
+    // justify-content: start;
   }
   &__date {
     color: #999;
@@ -135,6 +138,17 @@
   &__image{
     height: 300px;
   }
+  // &__userName {
+  //     color: #434a54;
+  //     font-size: 16px;
+  //     font-weight: bold;
+  //   }
+  //   &__date {
+  //     color: #999;
+  //     font-size: 12px;
+  //     padding-left: 10px;
+  //     // float: left;
+  //   }
 }
 
 .MainBottomBar {
