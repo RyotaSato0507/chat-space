@@ -3,16 +3,16 @@ $(function(){
     if ( message.image ) {
       let html =
         `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageInfo">
-            <div class="MessageInfo__userName">
+          <div class="MainChatInfo">
+            <div class="MainChatInfo__userName">
               ${message.user_name}
             </div>
-            <div class="MessageInfo__date">
+            <div class="MainChatInfo__date">
               ${message.created_at}
             </div>
           </div>
           <div class="Message">
-            <p class="Message__content">
+            <p class="MainChat__content">
               ${message.content}
             </p>
             <img class="Message__image" src="${message.image}">
@@ -22,16 +22,16 @@ $(function(){
     } else {
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
-        <div class="MessageInfo">
-          <div class="MessageInfo__userName">
+        <div class="MainChatInfo">
+          <div class="MainChatInfo__userName">
             ${message.user_name}
           </div>
-          <div class="MessageInfo__date">
+          <div class="MainChatInfo__date">
             ${message.created_at}
           </div>
         </div>
         <div class="Message">
-          <p class="Message__content">
+          <p class="MainChat__content">
             ${message.content}
           </p>
         </div>
@@ -54,9 +54,9 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.MessageField').append(html);      
+      $('.MainChat').append(html);      
       $('form')[0].reset();
-      $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+      $('.MainChat').animate({ scrollTop: $('.MainChat')[0].scrollHeight});
       $('.Form__submit').prop("disabled", false);
     })
     .fail(function() {
