@@ -12,7 +12,7 @@ $(function(){
             </div>
           </div>
           <div class="Message">
-            <p class="MainChat__content">
+            <p class="Message__content">
               ${message.content}
             </p>
             <img class="Message__image" src="${message.image}">
@@ -31,7 +31,7 @@ $(function(){
           </div>
         </div>
         <div class="Message">
-          <p class="MainChat__content">
+          <p class="Message__content">
             ${message.content}
           </p>
         </div>
